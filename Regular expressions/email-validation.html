@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #lbl{
+            visibility: hidden;
+        }
+    </style>
     <script>
         // email validation has 4 parts.
         // 1.[yourname] with any charater, number, dot or hyphen [then @]
@@ -30,7 +35,7 @@
 </head>
 <body>
     <input type="text" id="email" title="input" placeholder="EMail">
-    <label for="" id="lbl" style="visibility: hidden;">InValid</label>
+    <label for="" id="lbl" >InValid</label>
     <br>
     <button title="button" onclick="validate()" type="button">Submit</button>
 </body>
