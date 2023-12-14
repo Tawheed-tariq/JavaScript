@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function same_both(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("pass").value;
+        if(username==password){
+            alert("Username and password cannot be same");
+        }
+    }
+</script>
+
+</head>
+<body>
+    <input type="text" id="username" placeholder="Username" />
+    <br><br>
+    
+    <input type="password" id="pass" placeholder="password" />
+    <br><br>
+    <input type="button" onclick="same_both()" value="Click me"/>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var width = 20;
+        var difference = 2;
+        var interval_id = 0;
+        function increase(){
+            interval_id = setInterval(zoomIn,200);
+        }
+        function zoomIn(){
+            if(width < 100){
+                width += difference;
+                document.getElementById("img1").style.width = width;
+            }
+            else{
+                clearInterval(interval_id);
+            }
+        }
+        function decrease(){
+            interval_id = setInterval(zoomOut,200);
+        }
+        function zoomOut(){
+            if(width >  20){
+                width -= difference;
+                document.getElementById("img1").style.width = width;
+            }
+            else{
+                clearInterval(interval_id);
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="img1" width="20" src="png-transparent-love-hearts-love-hearts-red-heart-love-heart-computer-icons-thumbnail.png" alt="" onmouseover="increase()" onmouseout="decrease()"/><br>
+</body>
+</html>

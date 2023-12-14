@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // email validation has 4 parts.
+        // 1.[yourname] with any charater, number, dot or hyphen [then @]
+        // 2.[domain] with any character , number or hyphen [then .]
+        // 3.[extension] with any character 
+        // 4. [optional extension] with any character starting with .
+        // example yourname@domain.extension(.extension)
+        function validate(){
+            var EMail = document.getElementById("email").value;
+            var label = document.getElementById("lbl");
+            var regx= /^([a-z0-9\.-_]+)@([a-z 0-9-]+).([a-z]{2,10})(.[a-z]{2,10})?$/; //^ --> start, $ --> end, ? --> optional
+            if(regx.test(EMail)){
+                label.innerHTML="Valid";
+                label.style.visibility="Visible";
+                label.style.color="green";
+            }
+            else{
+                label.innerHTML="InValid";
+                label.style.visibility="Visible";
+                label.style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="email" title="input" placeholder="EMail">
+    <label for="" id="lbl" style="visibility: hidden;">InValid</label>
+    <br>
+    <button title="button" onclick="validate()" type="button">Submit</button>
+</body>
+</html>

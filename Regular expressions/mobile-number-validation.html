@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            var phnNum = document.getElementById("phnNum").value;
+            var label = document.getElementById("lbl");
+            var regx= /^[6-9]\d{9}$/; //^ --> start, \d{9} --> any digit 9 times, $ --> end
+            if(regx.test(phnNum)){
+                label.innerHTML="Valid";
+                label.style.visibility="Visible";
+                label.style.color="green";
+            }
+            else{
+                label.innerHTML="InValid";
+                label.style.visibility="Visible";
+                label.style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="phnNum" title="input" placeholder="Phone number">
+    <label for="" id="lbl" style="visibility: hidden;">InValid</label>
+    <br>
+    <button title="button" onclick="validate()" type="button">Submit</button>
+</body>
+</html>

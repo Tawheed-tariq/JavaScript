@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            var uname = document.getElementById("uname").value;
+            regex = new RegExp("[^abc2][d-h][3-9]hf", "i"); //case insensitive flag is used
+           // var regex = /E00/;  //here you can use any regexp like [A-Z] or [^a]
+            if(regex.test(uname)){
+                alert("Valid username");
+                document.getElementById("lbl").style.visibility="hidden";
+            }
+            else{
+                alert("Invalid username");
+                document.getElementById("lbl").style.visibility="visible";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" title="input" placeholder="Username" id="uname">
+    <label for="" id="lbl" style="color: red; visibility: hidden;">Invalid Username</label>
+    <br>
+    <button title="button" type="button" onclick="validate()">Submit</button>
+</body>
+</html>

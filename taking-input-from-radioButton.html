@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fnc(){
+            var rd1 = document.getElementById("rd1");
+            var rd2 = document.getElementById("rd2");
+            if(rd1.checked == true)
+                alert("You ahve selected" + rd1.value);
+            else if(rd2.checked==true)
+                alert("You have selected" + rd2.value);
+            else 
+                alert("Please select one of them");
+        }
+    </script>
+</head>
+<body>
+    <input id="rd1" name="group1" placeholder="hello" type="radio" value="simple snippets">simple snippets</input>
+    <br>
+    <input id="rd2" name="group1" placeholder="hello" type="radio" value="sinippets simple">snippets simple</input>
+    <!--name of both is same because e only want to take one input-->
+    <br>
+    <button id="bttn" onclick="fnc()">click me</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function fnc(){
+            var select = document.getElementById("selectbox");
+            alert(select.options[select.selectedIndex].value);
+        }
+    </script>
+</head>
+<body>
+    <select name="select1" id="selectbox" title="select">
+        <option value="simple snippets">simple snippets</option>
+        <option value="Except me">Except me</option>
+        <option value="Tawheed tariq">Tawheed tariq</option>
+    </select>
+    <br>
+    <button title="button" onclick="fnc()">
+        click me
+    </button>
+</body>
+</html>
