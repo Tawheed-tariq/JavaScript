@@ -37,3 +37,9 @@ function a(){
 // b()
 
 a()() //these both are same and here function is also treated as a variable
+
+sum(12,13)
+
+function sum(a,b){
+    console.log(a+b);
+}
